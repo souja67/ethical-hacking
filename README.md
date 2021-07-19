@@ -1,12 +1,14 @@
-## Getting Started
+# Getting Started
 
-### Information
+## Information  
 
-Kali Linux is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security
+**Kali Linux** is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security.
 
-https://www.kali.org/docs/
+* https://www.kali.org/docs/
 
-### Prerequisites
+
+
+## Prerequisites
 
 This is the list of prerequisite software you need to deploy the sandbox ethical hacking environment.
 
@@ -20,7 +22,7 @@ Oracle VirtualBox
 * Download VirtaulBox from here: https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-Win.exe
 
 
-### Deployment
+# Deployment
 
 1. Clone the repo
    ```sh
@@ -34,9 +36,16 @@ Oracle VirtualBox
    ```sh
    vagrant up; vagrant ssh kali
 
-## Demo #1
+# Demo #1
 
-1. Turn on monitor mode
+## Wireless Penetration Testing Demo
+
+1. Login to Kali Linux virtual machine <br>
+    ```sh
+    username: vagrant
+    password: vagrant
+
+2. Turn on monitor mode
     ```sh
     airmon-ng start wlan0
 
@@ -48,10 +57,10 @@ Oracle VirtualBox
     ```sh
     macchanger -r wlan0
 
-## Demo #2
+# Demo #2
 
 1. 
 
-## Demo #3
+# Demo #3
 
 1. 

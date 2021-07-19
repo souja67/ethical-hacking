@@ -30,7 +30,18 @@ Oracle VirtualBox
 
 ## Demo #1
 
-1. 
+1. Turn on monitor mode
+    ```sh
+airmon-ng start wlan0
+
+2. Set Wireless Card Offline 
+    ```sh
+sudo ifconfig wlan0 down
+
+3. Change MAC Address
+    ```sh
+macchanger -r wlan0
+
 
 ## Demo #2
 

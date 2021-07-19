@@ -45,6 +45,8 @@ Oracle VirtualBox
     username: vagrant
     password: vagrant
 
+![Alt text](/screenshots/image001.png?raw=true)
+
 2. Turn on monitor mode
     ```sh
     airmon-ng start wlan0

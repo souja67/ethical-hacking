@@ -32,15 +32,15 @@ Oracle VirtualBox
 
 1. Turn on monitor mode
     ```sh
-airmon-ng start wlan0
+    airmon-ng start wlan0
 
 2. Set Wireless Card Offline 
     ```sh
-sudo ifconfig wlan0 down
+    sudo ifconfig wlan0 down
 
 3. Change MAC Address
     ```sh
-macchanger -r wlan0
+    macchanger -r wlan0
 
 
 ## Demo #2

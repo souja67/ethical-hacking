@@ -41,8 +41,7 @@ Oracle VirtualBox
 3. Change MAC Address
     ```sh
     macchanger -r wlan0
-
-
+    
 ## Demo #2
 
 1. 

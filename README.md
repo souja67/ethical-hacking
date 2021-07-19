@@ -1,5 +1,11 @@
 ## Getting Started
 
+### Information
+
+Kali Linux is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security
+
+https://www.kali.org/docs/
+
 ### Prerequisites
 
 This is the list of prerequisite software you need to deploy the sandbox ethical hacking environment.
@@ -41,7 +47,7 @@ Oracle VirtualBox
 3. Change MAC Address
     ```sh
     macchanger -r wlan0
-    
+
 ## Demo #2
 
 1. 

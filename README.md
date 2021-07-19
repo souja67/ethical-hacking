@@ -6,6 +6,10 @@
 
 * https://www.kali.org/docs/
 
+## Class Questions
+
+* Why do we need to change the MAC Address of our wireless adapter?
+
 
 
 ## Prerequisites
@@ -20,6 +24,13 @@ Vagrant
 
 Oracle VirtualBox
 * Download VirtaulBox from here: https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-Win.exe
+
+## Needed Hardware
+
+Wireless Adapter that supports monitor mode and packet injection
+* Suggested: 
+    * https://amzn.to/3ilyAmq
+    * https://amzn.to/2TkbJz5
 
 
 # Deployment

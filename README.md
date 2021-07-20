@@ -41,7 +41,7 @@ Wireless Adapter that supports monitor mode and packet injection
 
 2. Change to repository directory
    ```sh
-   cd /ethcical-hacking
+   cd .\ethcical-hacking\
 
 3. Deploy Ethical Hacking Environment (Will take some time depending on internet connection)
    ```sh
@@ -58,11 +58,11 @@ Wireless Adapter that supports monitor mode and packet injection
 
 ![Alt text](/screenshots/image001.png?raw=true)
 
-2. Turn on monitor mode
+2. Open Terminal; Turn on monitor mode
     ```sh
     airmon-ng start wlan0
 
-2. Set Wireless Card Offline 
+3. Set Wireless Card Offline 
     ```sh
     sudo ifconfig wlan0 down
 

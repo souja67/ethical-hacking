@@ -6,12 +6,6 @@
 
 * https://www.kali.org/docs/
 
-## Class Questions
-
-* Why do we need to change the MAC Address of our wireless adapter?
-
-
-
 ## Prerequisites
 
 This is the list of prerequisite software you need to deploy the sandbox ethical hacking environment.
@@ -49,6 +43,18 @@ Wireless Adapter that supports monitor mode and packet injection
 
 # Demo #1
 
+## Demo Questions
+
+* How many channels are available on 2.4Ghz Wifi frequency?
+
+* What's the purpose of changing the MAC Address of the wireless adapter used to perform wireless attacks?
+
+* Does hiding your SSID protect your wireless network from wireless attacks?
+
+* What measures can be taken to secure a wireless network?
+<br>
+<br>
+
 ## Wireless Penetration Testing Demo
 
 1. Login to Kali Linux virtual machine <br>
@@ -58,22 +64,22 @@ Wireless Adapter that supports monitor mode and packet injection
 
 ![Alt text](/screenshots/image001.png?raw=true)
 
-2. Open Terminal; Turn on monitor mode
+2. Open Terminal; Check to make sure wireless adapter exist
     ```sh
-    airmon-ng start wlan0
+    sudo ifconfig
 
-3. Set Wireless Card Offline 
+3. Change wireless adapter to monitor mode 
     ```sh
-    sudo ifconfig wlan0 down
+    sudo airmon-ng start wlan0
 
-3. Change MAC Address
+4. Set wireless adapter offline
     ```sh
-    macchanger -r wlan0
+    sudo ifconfig wlan0 down    
 
-# Demo #2
+5. Change MAC Address
+    ```sh
+    sudo macchanger -r wlan0
 
-1. 
-
-# Demo #3
-
-1. 
+6. Start wireless sniffing session
+    ```sh
+    sudo airodump-ng wlan0

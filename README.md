@@ -29,7 +29,7 @@ Wireless Adapter that supports monitor mode and packet injection
 
 # Deployment
 
-1. Clone the repo
+1. Open Powershell; Clone the repo
    ```sh
    git clone https://github.com/souja67/ethical-hacking.git
 
@@ -37,9 +37,17 @@ Wireless Adapter that supports monitor mode and packet injection
    ```sh
    cd .\ethcical-hacking\
 
-3. Deploy Ethical Hacking Environment (Will take some time depending on internet connection)
+3. Install Virtualbox Extension Pack
+    ```sh
+    & "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" extpack install .\misc\Oracle_VM_VirtualBox_Extension_Pack-6.1.24.vbox-extpack
+
+4. Accept License Agreement
+    ```sh
+    Type 'y' to accept; press Enter
+
+4. Deploy Ethical Hacking Environment (Will take some time depending on internet connection)
    ```sh
-   vagrant up; vagrant ssh kali
+   vagrant up
 
 # Demo #1
 
@@ -51,7 +59,7 @@ Wireless Adapter that supports monitor mode and packet injection
 
 * Does hiding your SSID protect your wireless network from wireless attacks?
 
-* What measures can be taken to secure a wireless network?
+* What measures can be taken to secure a WiFi network?
 <br>
 <br>
 

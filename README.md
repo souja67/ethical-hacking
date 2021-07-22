@@ -1,12 +1,25 @@
 # Getting Started
 
-## Information  
+## Information & Resources
 
-**Kali Linux** is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security.
+**Kali Linux** - Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security.
 
 * https://www.kali.org/docs/
 
-## Prerequisites
+**AirCrack-NG** - Aircrack-ng is a complete suite of tools to assess WiFi network security. It focuses on multiple areas of WiFi security: Monitoring, Attacking, Testing, and Cracking.
+
+* https://www.aircrack-ng.org/
+
+**Metasploit** - Knowledge is power, especially when it’s shared. A collaboration between the open source community and Rapid7, Metasploit helps security teams do more than just verify vulnerabilities, manage security assessments, and improve security awareness; it empowers and arms defenders to always stay one step (or two) ahead of the game.
+
+* https://www.metasploit.com/
+
+**Metaspoloitable3** - a free virtual machine that allows you to simulate attacks largely using Metasploit. It has been used by people in the security industry for a variety of reasons: such as training for network exploitation, exploit development, software testing, technical job interviews, sales demonstrations, or CTF junkies who are looking for kicks, etc :-)
+
+* https://www.rapid7.com/blog/post/2016/11/15/test-your-might-with-the-shiny-new-metasploitable3/
+
+
+# Prerequisites
 
 This is the list of prerequisite software you need to deploy the sandbox ethical hacking environment.
 
@@ -45,15 +58,24 @@ Wireless Adapter that supports monitor mode and packet injection
     ```sh
     Type 'y' to accept; press Enter
 
-4. Deploy Ethical Hacking Environment (Will take some time depending on internet connection)
+5. Deploy initial Ethical Hacking Environment (Will take some time depending on internet connection)
    ```sh
    vagrant up
+
+6. Need to shutdown our virtual environment temporarily
+   ```sh
+   vagrant halt
+
+7. Enable USB access to our Kali Linux virtual machine
+   
 
 # Demo #1
 
 ## Demo Questions
 
 * How many channels are available on 2.4Ghz Wifi frequency?
+
+* Why do we need to change the mode of the wireless adapter used for wireless attacks?
 
 * What's the purpose of changing the MAC Address of the wireless adapter used to perform wireless attacks?
 
@@ -74,7 +96,7 @@ Wireless Adapter that supports monitor mode and packet injection
 
 2. Open Terminal; Check to make sure wireless adapter exist
     ```sh
-    sudo ifconfig
+    sudo ifconfig | grep wlan0
 
 3. Change wireless adapter to monitor mode 
     ```sh

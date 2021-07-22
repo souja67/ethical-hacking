@@ -1,6 +1,9 @@
-nmap -Pn -sn 192.168.56.0/24
+nmap -sn 192.168.22.0/24
+* -sn : skip port scan
 
-nmap -A 192.168.56.107
+nmap -A 192.168.22.11
+* -A : Enable OS detection, version detection, script scanning, and traceroute
+
 
 searchsploit ManageEngine Desktop Central 9
 

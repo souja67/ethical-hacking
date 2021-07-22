@@ -1,3 +1,17 @@
+# DISCLAIMER
+
+This information provided as knowledge is for informational and educational purpose only. Please do not attempt to violate the law with anything obtained from here. The misuse of the information in this repository can result in criminal charges brought against any person(s) in question.
+
+**DON'T BE EVIL!** 
+
+## What is Ethical Hacking?
+
+Ethical hacking involves an authorized attempt to gain unauthorized access to a computer system, application, or data. Carrying out an ethical hack involves duplicating strategies and actions of malicious attackers. This practice helps to identify security vulnerabilities which can then be resolved before a malicious attacker has the opportunity to exploit them.
+
+Also known as “white hats,” ethical hackers are security experts that perform these assessments. The proactive work they do helps to improve an organization’s security posture. With prior approval from the organization or owner of the IT asset, the mission of ethical hacking is opposite from malicious hacking.
+
+* source: https://www.synopsys.com/glossary/what-is-ethical-hacking.html
+
 # Getting Started
 
 ## Information & Resources
@@ -99,18 +113,24 @@ A wireless Adapter that supports monitor mode and packet injection
     ```sh
     sudo ifconfig | grep wlan0
 
-3. Change wireless adapter to monitor mode 
+3. Kill any potential problem processes within Kali Linux virtual machine
+    ```sh
+    sudo airmon-ng check kill
+
+4. Set wireless adapter to monitor mode (Managed mode by default)
     ```sh
     sudo airmon-ng start wlan0
 
-4. Set wireless adapter offline
+5. Set wireless adapter offline
     ```sh
     sudo ifconfig wlan0 down    
 
-5. Change MAC Address
+6. Change MAC Address
     ```sh
     sudo macchanger -r wlan0
 
-6. Start wireless sniffing session
+7. Start sniffing wireless packets
     ```sh
     sudo airodump-ng wlan0
+
+8. Find target wifi access point to be PWND!

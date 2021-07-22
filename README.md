@@ -2,7 +2,7 @@
 
 This information provided is for informational and educational purpose only. Please do not attempt to violate the law with anything obtained from here. The misuse of the information in this repository can result in criminal charges brought against any person(s) in question.
 
-**DON'T BE EVIL!** 
+**JUST DON'T BE EVIL!** 
 
 ## What is Ethical Hacking?
 
@@ -65,28 +65,46 @@ A wireless Adapter that supports monitor mode and packet injection
 1. Open Powershell; Clone the repo
    ```sh
    git clone https://github.com/souja67/ethical-hacking.git
+![image](https://user-images.githubusercontent.com/25991921/126594021-68f29970-c758-42a5-8b15-56cc6312bb43.png)
 
 2. Change to repository directory
    ```sh
    cd .\ethcical-hacking\
+![image](https://user-images.githubusercontent.com/25991921/126594133-f202fe6d-ba5d-4b65-be2e-c1e2305f7fac.png)
 
 3. Install Virtualbox Extension Pack
     ```sh
     & "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" extpack install .\misc\Oracle_VM_VirtualBox_Extension_Pack-6.1.24.vbox-extpack
+![image](https://user-images.githubusercontent.com/25991921/126594375-f2d1a871-718e-4710-8729-9611441fd1b9.png)
 
 4. Accept License Agreement
     ```sh
     Type 'y' to accept; press Enter
+![image](https://user-images.githubusercontent.com/25991921/126594441-d223dff2-80ad-4256-9220-2dddc2bf6f68.png)
 
 5. Deploy initial virtual environment (Will take some time depending on internet connection)
    ```sh
    vagrant up
+![image](https://user-images.githubusercontent.com/25991921/126594631-b196abc5-95e7-4317-a1f1-92b734e2240d.png)
 
-6. Need to shutdown our virtual environment temporarily
+6. Need to shutdown our Kali virtual machine temporarily
    ```sh
-   vagrant halt
+   vagrant halt kali
+![image](https://user-images.githubusercontent.com/25991921/126594935-d0d166f9-07cc-472d-bf9e-c65026d1232f.png)
 
-7. Enable USB access to Kali Linux virtual machine
+7. Open Virtualbox; Go to settings of Kali virtual machine <br>
+![image](https://user-images.githubusercontent.com/25991921/126595881-c7721324-cf17-432d-abff-affb2cbacf30.png)
+
+8. Enable USB controller on Kali virtual machine <br>
+![image](https://user-images.githubusercontent.com/25991921/126596146-9fe4b7f6-94c5-4c96-ab45-1d8cc38c1c07.png)
+
+9. Power on Kali virtual machine
+   ```sh
+   vagrant up kali
+
+10. 
+![image](https://user-images.githubusercontent.com/25991921/126593831-2560bc2f-5b99-4a72-a044-5522c4092bca.png)
+
    
 
 # Demo #1
@@ -112,7 +130,7 @@ A wireless Adapter that supports monitor mode and packet injection
     username: vagrant
     password: vagrant
 
-![Alt text](/screenshots/image001.png?raw=true)
+![image](https://user-images.githubusercontent.com/25991921/126595162-1e1f5036-a61a-4905-abaf-6d252ca240db.png)
 
 2. Open Terminal; Check to make sure wireless adapter exist
     ```sh

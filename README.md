@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-This information provided as knowledge is for informational and educational purpose only. Please do not attempt to violate the law with anything obtained from here. The misuse of the information in this repository can result in criminal charges brought against any person(s) in question.
+This information provided is for informational and educational purpose only. Please do not attempt to violate the law with anything obtained from here. The misuse of the information in this repository can result in criminal charges brought against any person(s) in question.
 
 **DON'T BE EVIL!** 
 
@@ -24,7 +24,7 @@ Also known as “white hats,” ethical hackers are security experts that perfor
 
 * https://www.aircrack-ng.org/
 
-**Metasploit** - Knowledge is power, especially when it’s shared. A collaboration between the open source community and Rapid7, Metasploit helps security teams do more than just verify vulnerabilities, manage security assessments, and improve security awareness; it empowers and arms defenders to always stay one step (or two) ahead of the game.
+**Metasploit** - A collaboration between the open source community and Rapid7, Metasploit helps security teams do more than just verify vulnerabilities, manage security assessments, and improve security awareness; it empowers and arms defenders to always stay one step (or two) ahead of the game.
 
 * https://www.metasploit.com/
 
@@ -32,6 +32,13 @@ Also known as “white hats,” ethical hackers are security experts that perfor
 
 * https://www.rapid7.com/blog/post/2016/11/15/test-your-might-with-the-shiny-new-metasploitable3/
 
+**Nmap** - Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts. Nmap runs on all major computer operating systems, and official binary packages are available for Linux, Windows, and Mac OS X. In addition to the classic command-line Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zenmap), a flexible data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff), and a packet generation and response analysis tool (Nping).
+
+* https://nmap.org/download.html
+
+**EC-Council** - Certified Ethical Hacker (CEH) will teach you the latest commercial-grade hacking tools, techniques, and methodologies used by hackers and information security professionals to lawfully hack an organization.
+
+* https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
 
 # Prerequisites
 
@@ -51,11 +58,9 @@ This is the list of prerequisite software you need to deploy the sandbox ethical
 A wireless Adapter that supports monitor mode and packet injection
 * Suggested: 
     * Alfa AWUS036ACS 802.11ac AC600 Wi-Fi Wireless Network Adapter - https://amzn.to/2TkbJz5
-    * Alfa AWUS036NHA - Wireless B/G/N USB Adaptor - https://amzn.to/3ilyAmq
-    
-
-
-# Deployment
+    * Alfa AWUS036NHA - Wireless B/G/N USB Adaptor - https://amzn.to/3ilyAmq    
+<br>
+# Deployment of Virtual Environment
 
 1. Open Powershell; Clone the repo
    ```sh
@@ -73,7 +78,7 @@ A wireless Adapter that supports monitor mode and packet injection
     ```sh
     Type 'y' to accept; press Enter
 
-5. Deploy initial Ethical Hacking Environment (Will take some time depending on internet connection)
+5. Deploy initial virtual environment (Will take some time depending on internet connection)
    ```sh
    vagrant up
 
@@ -81,7 +86,7 @@ A wireless Adapter that supports monitor mode and packet injection
    ```sh
    vagrant halt
 
-7. Enable USB access to our Kali Linux virtual machine
+7. Enable USB access to Kali Linux virtual machine
    
 
 # Demo #1
@@ -134,3 +139,4 @@ A wireless Adapter that supports monitor mode and packet injection
     sudo airodump-ng wlan0
 
 8. Find target wifi access point to be PWND!
+

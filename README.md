@@ -139,4 +139,3 @@ A wireless Adapter that supports monitor mode and packet injection
     sudo airodump-ng wlan0
 
 8. Find target wifi access point to be PWND!
-

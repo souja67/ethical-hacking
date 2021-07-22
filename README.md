@@ -6,7 +6,7 @@
 
 * https://www.kali.org/docs/
 
-**AirCrack-NG** - Aircrack-ng is a complete suite of tools to assess WiFi network security. It focuses on multiple areas of WiFi security: Monitoring, Attacking, Testing, and Cracking.
+**Aircrack-NG** - Aircrack-ng is a complete suite of tools to assess WiFi network security. It focuses on multiple areas of WiFi security: Monitoring, Attacking, Testing, and Cracking.
 
 * https://www.aircrack-ng.org/
 
@@ -23,21 +23,22 @@
 
 This is the list of prerequisite software you need to deploy the sandbox ethical hacking environment.
 
-Git
+**Git**
 * Download Git from here: https://github.com/git-for-windows/git/releases/download/v2.32.0.windows.2/Git-2.32.0.2-64-bit.exe
 
-Vagrant
+**Vagrant**
 * Download Vagrant from here: https://releases.hashicorp.com/vagrant/2.2.17/vagrant_2.2.17_x86_64.msi
 
-Oracle VirtualBox
+**Oracle VirtualBox**
 * Download VirtaulBox from here: https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-Win.exe
 
 ## Needed Hardware
 
-Wireless Adapter that supports monitor mode and packet injection
+A wireless Adapter that supports monitor mode and packet injection
 * Suggested: 
-    * https://amzn.to/3ilyAmq
-    * https://amzn.to/2TkbJz5
+    * Alfa AWUS036ACS 802.11ac AC600 Wi-Fi Wireless Network Adapter - https://amzn.to/2TkbJz5
+    * Alfa AWUS036NHA - Wireless B/G/N USB Adaptor - https://amzn.to/3ilyAmq
+    
 
 
 # Deployment

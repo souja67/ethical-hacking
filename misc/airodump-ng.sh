@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash
 
 ifconfig | grep wlan0 && ifconfig wlan0 down
 sleep 1

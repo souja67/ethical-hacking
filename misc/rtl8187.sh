@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash
 
 echo Remove RTL8187 Module
 rmmod rtl8187

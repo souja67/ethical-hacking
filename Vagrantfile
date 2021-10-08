@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     kali.vm.hostname = "kali"
     #kali.vm.box_url = "ubuntu/groovy64"
 
-    kali.vm.network "private_network", ip: "192.168.22.10"
+    kali.vm.network "private_network", ip: "172.16.1.10"
     kali.vm.provision "file", source: "~/.vagrant.d/insecure_private_key", destination: "~/.ssh/insecure_private_key"
     kali.vm.provision "file", source: "~/.vagrant.d/insecure_private_key", destination: "/home/vagrant/.ssh/insecure_private_key"
     kali.vm.provision "shell", inline: <<-EOF
@@ -26,11 +26,11 @@ Vagrant.configure("2") do |config|
     EOF
   end
 
-  config.vm.define "win2k8" do |ubuntu|
-    ubuntu.vm.box = "rapid7/metasploitable3-win2k8"
-    ubuntu.vm.hostname = "win2k8"
-    ubuntu.vm.network "private_network", ip: "192.168.22.11"
-    ubuntu.vm.provision "shell", inline: <<-EOF
+  config.vm.define "win2k8" do | win2k8 |
+    win2k8.vm.box = "rapid7/metasploitable3-win2k8"
+    win2k8.vm.hostname = "win2k8"
+    win2k8.vm.network "private_network", ip: "172.16.1.11"
+    win2k8.vm.provision "shell", inline: <<-EOF
     EOF
     
   end

